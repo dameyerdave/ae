@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AE19</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js"></script>
+<!--script src="js/splunk.min.js"></script-->
+<style>
+* {
+	font-family: Arial;
+}
+h3 {
+	margin-top: 20px;
+	border-bottom: 1px solid #4c4c4c;
+}
+body {
+  background: #555;
+}
+td {
+	vertical-align: top;
+}
+.feed {
+	/*margin-left: 8px;*/
+}
+.feed ul {
+	list-style-type: none;
+	padding-inline-start: 15px !important;
+}
+.feed li {
+	margin-top: 8px;
+}
+.feed li img {
+	width: 15px;
+}
+#wefnews td {
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 10px;
+}
+#wefnews td:nth-child(2) {
+	font-style: italic;
+}
+#wefnews td:nth-child(3) {
+	font-weight: bold;
+}
+#wefpics img {
+	width: 280px;
+}
+#rhb h3 {
+	border: 0px !important;
+	font-weight: bold;
+	font-size: 16px;
+}
+#rhb li {
+	border-bottom: 1px solid #4c4c4c;
+}
+
+#content {
+  max-width: 1500px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+}
+</style>
+</head>
+<body><div id="content">
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<a class="navbar-brand" href="#">OSINT</a>
+</div>
+<ul class="nav navbar-nav">
+  <li class="active"><a data-toggle="tab" href="#news">News</a></li>
+  <li><a data-toggle="tab" href="#meteo">Meteo</a></li>
+  <li><a data-toggle="tab" href="#lawinengefahr">Lawinengefahr</a></li>
+  <li><a data-toggle="tab" href="#strassenverkehr">Strassenverkehr</a></li>
+  <li><a data-toggle="tab" href="#schienenverkehr">Schienenverkehr</a></li>
+  <li><a data-toggle="tab" href="#grippe">Grippe</a></li>
+  <li><a data-toggle="tab" href="#gegenveranstaltungen">Gegenveranstaltungen</a></li>
+  <li><a data-toggle="tab" href="#cams">Kameras</a></li>
+  <li><a data-toggle="tab" href="#pics">Bilder</a></li>
+</ul>
+<span class="navbar-text">
+	<b>Stand:&nbsp;<span id="stand"></span></b>
+</span>
+</div>
+</nav>
+<div class="tab-content">
+<div id="news" class="tab-pane fade in active">
+<h3> News im WEF-Kontext </h3>
+<p>
+<div id="wefnews"></div>
+</p>
+</div>
+
+<div id="meteo" class="tab-pane fade">
+<h3>
+<button class="btn btn-default" data-toggle="collapse" data-target="#wetter">Hide</button>
+Meteo
+</h3>
+<div id="wetter" class="collapse in">
+<p>
+<table>
+<tr>
+<td>
+<div id="wcom-96ae56e9953597a9c650612fe60633dd" style="border: 1px solid #CCC; background-color: #FCFCFC; border-radius: 5px" class="wcom-default w300x250"><link rel="stylesheet" href="//cs3.wettercomassets.com/woys/5/css/w.css" media="all"><div class="wcom-city"><a style="color: #000" href="https://www.wetter.com/schweiz/davos_dorf/CH0CH0995.html" target="_blank" rel="nofollow" title="Wetter Davos Dorf">Wetter Davos Dorf</a></div><div id="wcom-96ae56e9953597a9c650612fe60633dd-weather"></div><script type="text/javascript" src="//cs3.wettercomassets.com/woys/5/js/w.js"></script><script type="text/javascript">_wcomWidget({id: 'wcom-96ae56e9953597a9c650612fe60633dd',location: 'CH0CH0995',format: '300x250',type: 'summary'});</script></div>
+</td><td>
+<div id="wcom-296a56c537990de350fa51696d6e3e96" style="border: 1px solid #CCC; background-color: #FCFCFC; border-radius: 5px" class="wcom-default w300x250"><link rel="stylesheet" href="//cs3.wettercomassets.com/woys/5/css/w.css" media="all"><div class="wcom-city"><a style="color: #000" href="https://www.wetter.com/schweiz/thusis/CH0CH3967.html" target="_blank" rel="nofollow" title="Wetter Thusis">Wetter Thusis</a></div><div id="wcom-296a56c537990de350fa51696d6e3e96-weather"></div><script type="text/javascript" src="//cs3.wettercomassets.com/woys/5/js/w.js"></script><script type="text/javascript">_wcomWidget({id: 'wcom-296a56c537990de350fa51696d6e3e96',location: 'CH0CH3967',format: '300x250',type: 'summary'});</script></div>
+</td><td>
+<div id="wcom-a535de6ef69936a627c1d96399055e06" style="border: 1px solid #CCC; background-color: #FCFCFC; border-radius: 5px" class="wcom-default w300x250"><link rel="stylesheet" href="//cs3.wettercomassets.com/woys/5/css/w.css" media="all"><div class="wcom-city"><a style="color: #000" href="https://www.wetter.com/schweiz/st_moritz/CH0CH3772.html" target="_blank" rel="nofollow" title="Wetter St. Moritz">Wetter St. Moritz</a></div><div id="wcom-a535de6ef69936a627c1d96399055e06-weather"></div><script type="text/javascript" src="//cs3.wettercomassets.com/woys/5/js/w.js"></script><script type="text/javascript">_wcomWidget({id: 'wcom-a535de6ef69936a627c1d96399055e06',location: 'CH0CH3772',format: '300x250',type: 'summary'});</script></div>
+</td>
+</tr>
+</table>
+</p>
+</div>
+<!-- Wetter Details -->
+<ul class="nav nav-pills">
+<li class="active"><a data-toggle="pill" href="#davos">Davos</a></li>
+<li><a data-toggle="pill" href="#thusis">Thusis</a></li>
+<li><a data-toggle="pill" href="#stmoritz">St. Moritz</a></li>
+</ul>
+<div class="tab-content">
+<div id="davos" class="tab-pane fade in active">
+<h3>Wetterdetails Davos</h3>
+<p>
+<a target="blank" href="https://www.meteoblue.com/de/wetter/vorhersage/woche/davos_schweiz_2661039">
+<img src="ss/meteodavos.png"/>
+</a>
+</p>
+</div>
+<div id="thusis" class="tab-pane fade">
+<h3>Wetterdetails Thusis</h3>
+<p>
+<a target="blank" href="https://www.meteoblue.com/de/wetter/vorhersage/woche/thusis_schweiz_2658371">
+<img src="ss/meteothusis.png"/>
+</a>
+</div>
+<div id="stmoritz" class="tab-pane fade">
+<h3>Wetterdetails St. Moritz</h3>
+<p>
+<a target="blank" href="https://www.meteoblue.com/de/wetter/vorhersage/woche/sankt-moritz_schweiz_2658813">
+<img src="ss/meteostmoritz.png"/>
+</a>
+</p>
+</div>
+</div>
+</p> <!--END Wetterdetails-->
+</div> <!--END Meteo-->
+
+<div id="lawinengefahr" class="tab-pane fade">
+<h3>Lawinengefahr</h3>
+<p>
+<table><tr>
+<td>
+<a target="_blank" href="https://www.slf.ch/de/lawinenbulletin-und-schneesituation.html#lawinengefahr">
+<img src="ss/lawinengefahr.png" />
+</a>
+</td>
+<td>
+<a class="btn btn-primary active" href="https://www.slf.ch/avalanche/bulletin/de/gk_c_de_complete.pdf">Lawinenbulletin</a>
+</td>
+</tr></table>
+</p>
+</div> <!-- END Lawinengefahr -->
+
+<div id="strassenverkehr" class="tab-pane fade">
+<h3>Strassenverkehr</h3>
+<p>
+<table>
+<tr>
+<td>
+<a target="_blank" href="http://www.strassen.gr.ch/sites/strassenzustand/karte.html">
+<img src="ss/vrkgr.png" />
+</a>
+</td><td>
+<div id="feed" class="feed"></div>
+</td>
+</tr>
+</table>
+</p>
+</div> <!--END Strassenverkehr-->
+
+<div id="schienenverkehr" class="tab-pane fade">
+<h3>Schienenverkehr</h3>
+<p>
+<table>
+<tr>
+<td>
+<a target="_blank" href="https://www.rhb.ch/de/betriebslage">
+<img src="ss/vrkrhb.png" />
+</a>
+</td>
+<td>
+<!--img src="ss/vrkrhbdesc.png" /-->
+<div id="rhb" class="feed"></div>
+</td>
+</tr>
+</table>
+</p>
+</div> <!--END Schienenverkehr-->
+
+<div id="grippe" class="tab-pane fade">
+<h3>Grippe</h3>
+<p>
+<table>
+<tr>
+<td>
+<a target="blank" href="https://www.bag.admin.ch/bag/de/home/krankheiten/ausbrueche-epidemien-pandemien/aktuelle-ausbrueche-epidemien/saisonale-grippe---lagebericht-schweiz.html">
+<img src="https://www.bag.admin.ch/bag/de/home/krankheiten/ausbrueche-epidemien-pandemien/aktuelle-ausbrueche-epidemien/saisonale-grippe---lagebericht-schweiz/_jcr_content/par/externalcontent.external.exturl.png/aHR0cDovL3d3dy5iYWctYW53LmFkbWluLmNoLzIwMTZfbWVsZG/VzeXN0ZW1lL3NlbnRpbmVsbGEvaW1hZ2VzL21hcF9hY3RfZC5w/bmc=.png" />
+</a>
+</td>
+<td>
+<a target="blank" href="https://www.bag.admin.ch/bag/de/home/krankheiten/ausbrueche-epidemien-pandemien/aktuelle-ausbrueche-epidemien/saisonale-grippe---lagebericht-schweiz.html">
+<img src="https://www.bag.admin.ch/bag/de/home/krankheiten/ausbrueche-epidemien-pandemien/aktuelle-ausbrueche-epidemien/saisonale-grippe---lagebericht-schweiz/_jcr_content/par/externalcontent.external.exturl.png/aHR0cDovL3d3dy5iYWctYW53LmFkbWluLmNoLzIwMTZfbWVsZG/VzeXN0ZW1lL3NlbnRpbmVsbGEvaW1hZ2VzL2luZmx1ZW56YV9y/ZWc2X2QucG5n.png" />
+</a>
+</td>
+</tr><tr>
+<td></td>
+<td>
+<a href="https://www.hug-ge.ch/de/laboratoire-virologie/die-neueste-fassung">
+<img id="hugge" style="margin-left: 23px"/>
+</a>
+</td>
+</tr>
+</table>
+</p>
+</div> <!--END Grippe-->
+
+<div id="gegenveranstaltungen" class="tab-pane fade">
+<h3>Gegenveranstaltungen</h3>
+<p>
+<img width="900" src="pics/veranstaltungen.png" />
+</p>
+</div> <!--END Gegenveranstaltungen-->
+
+<div id="cams" class="tab-pane fade">
+<h3>Cams</h3>
+<p>
+<h4>Davos</h4>
+<table><tr>
+<td>
+<a name="lkr-timelapse-player" data-id="1133188503" data-play="day" href="https://lookr.com/1133188503" target="_blank">Davos: 180° Panorama mit Jakobshorn</a><script async type="text/javascript" src="https://api.lookr.com/embed/script/player.js"></script>
+</td><td>
+<a name="lkr-timelapse-player" data-id="1371761403" data-play="day" href="https://lookr.com/1371761403" target="_blank">Davos: Habitations</a><script async type="text/javascript" src="https://api.lookr.com/embed/script/player.js"></script>
+</td><td>
+<a name="lkr-timelapse-player" data-id="1237559754" data-play="day" href="https://lookr.com/1237559754" target="_blank">Davos: Chalet Hotel Larix − Jakobshorn</a><script async type="text/javascript" src="https://api.lookr.com/embed/script/player.js"></script>
+</td><td>
+<a name="lkr-timelapse-player" data-id="1349787012" data-play="day" href="https://lookr.com/1349787012" target="_blank">Davos Platz: Davos − Schatzalp Panorama Hotel</a><script async type="text/javascript" src="https://api.lookr.com/embed/script/player.js"></script>
+</td><td>
+<a name="lkr-timelapse-player" data-id="1436368610" data-play="day" href="https://lookr.com/1436368610" target="_blank">Davos Platz: Jschalp: Blick auf Davos und zur Schatzalp</a><script async type="text/javascript" src="https://api.lookr.com/embed/script/player.js"></script>
+</td>
+</tr></table>
+<h4>Klosters</h4>
+<table><tr>
+<td>
+<a name="lkr-timelapse-player" data-id="1437749690" data-play="live" href="https://lookr.com/1437749690" target="_blank">Klosters: Sportzentrum − POI</a><script async type="text/javascript" src="https://api.lookr.com/embed/script/player.js"></script>
+</td><td>
+<a name="lkr-timelapse-player" data-id="1469097816" data-play="day" href="https://lookr.com/1469097816" target="_blank">Klosters Dorf: Schlappin</a><script async type="text/javascript" src="https://api.lookr.com/embed/script/player.js"></script>
+</td><td>
+<a name="lkr-timelapse-player" data-id="1508975881" data-play="live" href="https://lookr.com/1508975881" target="_blank">Klosters: Garfiun</a><script async type="text/javascript" src="https://api.lookr.com/embed/script/player.js"></script>
+</td>
+</tr></table>
+</p>
+</div> <!--END LiveTV-->
+
+<div id="pics" class="tab-pane fade">
+<h3> Bilder im WEF-Kontext </h3>
+<p>
+<div id="wefpics"></div>
+</p>
+</div> <!-- END Pics -->
+
+</div> <!--END-->
+</div>
+<script>
+$(document).ready(function() {
+$.get(
+   'ss/zustandsmeldungen.html',
+   function(data){
+	var $xml = $(data);
+	var ul = $('<ul></ul>');
+    	$('#feed').append(ul);
+	var listed = {};
+    	$xml.find("tr.item-message").each(function() {
+        var $this = $(this),
+            item = {
+                title: $this.find("td.message strong").text(),
+		duration: $this.find("td.message span.duration").text(),
+		place: $this.find("td.message span.place").text(),
+		published: $this.find("td.published").text().replace(/ [0-9]+(ml|lo)/, ''),
+		img: $this.find("td.status img").attr("src")
+        }
+	if(!(item.title in listed)) {
+		ul.append('<li><img src="'+item.img+'"/>&nbsp;<b>' + item.title + '</b>' + item.duration + ' ' + item.place + '</br><i>(' + item.published+ ')</i></li>')
+		listed[item.title] = true;
+	}
+	}).promise().done(function() {
+		var md5 = CryptoJS.MD5($('#feed ul li').text());
+                if (localStorage.getItem("feed") != md5) {
+                        $('a[href="#strassenverkehr"]').prepend('<img src="pics/warn.png"/>&nbsp;');
+                        localStorage.setItem("feed", md5);
+                }	
+	});
+    });
+$.get(
+   'ss/rhbbetriebslage.html',
+   function(data){
+	var $xml = $(data);
+	var ul = $('<ul></ul>');
+    	$('#rhb').append(ul);
+    	$xml.find("div.desc div.wrapper, .content_wrapper > p:nth-child(1)").each(function() {
+        var $this = $(this),
+            item = {
+                title: $this.html()
+		//duration: $this.find("td.message span.duration").text(),
+		//place: $this.find("td.message span.place").text(),
+		//published: $this.find("td.published").text(),
+		//img: $this.find("td.status img").attr("src")
+        }
+	ul.append('<li>' + item.title + '</li>')
+	}).promise().done(function() {
+		var md5 = CryptoJS.MD5($('#rhb').html());
+		if (localStorage.getItem("rhb") != md5) {
+			$('a[href="#schienenverkehr"]').prepend('<img src="pics/warn.png"/>&nbsp;');
+			localStorage.setItem("rhb", md5);
+		}
+	});
+    });
+
+$.get(
+   'ss/hugge.html',
+   function(data){
+	var $xml = $(data);
+	$xml.find("address > img").each(function() {
+		$("#hugge").attr("src", $(this).attr("src"));
+	});
+   }).promise().done(function() {
+	var md5 = CryptoJS.MD5($('#hugge').attr("src"));
+        if (localStorage.getItem("hugge") != md5) {
+                $('a[href="#grippe"]').prepend('<img src="pics/warn.png"/>&nbsp;');
+                localStorage.setItem("hugge", md5);
+        }	   
+   });
+
+$.ajax({
+	url : "ss/news.txt",
+	dataType: "text",
+	success : function (data) {
+		$("#wefnews").html(data);
+		var md5 = CryptoJS.MD5($('#wefnews').html());
+		if (localStorage.getItem("wefnews") != md5) {
+			$('a[href="#news"]').prepend('<img src="pics/warn.png"/>&nbsp;');
+			localStorage.setItem("wefnews", md5);
+		}
+	}
+});
+
+$.ajax({
+	url : "ss/pics.txt",
+	dataType: "text",
+	success : function (data) {
+		$("#wefpics").html(data);
+		var md5 = CryptoJS.MD5($('#wefpics').html());
+		if (localStorage.getItem("wefpics") != md5) {
+			$('a[href="#pics"]').prepend('<img src="pics/warn.png"/>&nbsp;');
+			localStorage.setItem("wefpics", md5);
+		}
+	}
+});
+
+// Date
+function pad(n, width, z) {
+  z = z || '0';
+  n = n + '';
+  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
+var d = new Date();
+var datestring = pad(d.getDate(),2)  + "." + pad((d.getMonth()+1),2) + "." + d.getFullYear() + " " +
+pad(d.getHours(),2) + ":" + pad(d.getMinutes(),2) + ":" + pad(d.getSeconds(),2);
+$("#stand").text(datestring);
+}); // END Document Ready
+</script>
+</body>
+</html>

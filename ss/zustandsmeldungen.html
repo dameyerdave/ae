@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Keywords" content="Graub&uuml;nden, Natur, Wirtschaftsstandort, Tourismus, dreisprachig" />
+    <meta name="Description" content="&Uuml;berblick über den Kanton Graub&uuml;nden" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+
+    <!-- style -->
+    <link href="http://www.strassen.gr.ch/sites/css/redesign/frontend-style.min.css" rel="stylesheet" type="text/css">
+
+    <!-- scripts -->
+    <script type="text/javascript" src="http://www.strassen.gr.ch/sites/js/redesign/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://www.strassen.gr.ch/sites/js/redesign/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="http://www.strassen.gr.ch/sites/new/js/main-app.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <title>Graub&uuml;nden Strasseninfos - Unser Kanton - www.gr.ch</title>
+
+    
+    <script type="text/javascript">
+    window.GLOBALS = window.GLOBALS || {};
+    window.GLOBALS.meta = {
+        domain: 'http://www.strassen.gr.ch',
+        language: 'de',
+        mobile: false
+    };
+    </script>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="header row">
+            <div class="col-xs-12">
+                <a href="http://www.strassen.gr.ch/sites/strassenzustand/index.html" class="logo" title="Kanton Graub&uuml;nden">
+                    <div class="row-fluid">
+                        <img class="logo-brand" src="http://www.strassen.gr.ch/sites/img/redesign/gr_wappen.gif" alt="Kanton Graub&uuml;nden" title="Kanton Graub&uuml;nden">
+                        <ul class="description hidden-xs hidden-sm">
+                            <li>Kanton Graub&uuml;nden</li>
+                            <li>Chantun Grischun</li>
+                            <li>Cantone dei Grigioni</li>
+                        </ul>
+                        <div class="pagetitle">
+                            <h1>
+                                Strasseninfos
+                            </h1>
+                            <h2 class="hidden-xs hidden-sm">Eine Dienstleistung von Tiefbauamt und Kantonspolizei</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row navigation">
+            <div class="lang-nav">
+                <ul>
+                    <li class="active">
+                        <a href="http://www.strassen.gr.ch/sites/strassenzustand/index.html">Deutsch</a>
+                    </li>
+                    <li>
+                        <a href="http://www.strassen.gr.ch/sites/strassenzustand/index_it.html">Italiano</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-nav">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        Strassenzustand
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a href="http://www.strassen.gr.ch/sites/strassenzustand/zustandsmeldungen.html">Liste Strassenzustand</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.strassen.gr.ch/sites/strassenzustand/karte.html">Karte Strassenzustand</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.strassen.gr.ch/sites/strassenzustand/abonnieren.html">Meldungen abonnieren</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        Baustellen
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a href="http://map.geo.gr.ch/gr_webmaps/wsgi/theme/Kantonales%20Strassennetz%20-%20Baustellen?layout=none">Detailkarte Baustellen</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.strassen.gr.ch/sites/baustelle/pdf.html">PDF-Liste Baustellen</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        Beschränkungen
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a href="http://map.geo.gr.ch/gesetzlicheauflagen_strassennetz">Gesetzliche Auflagen</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.strassen.gr.ch/sites/beschraenkungen/verkehr.html">Unbegl. kombi. Verkehr</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        Dokumentation
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a href="http://www.strassen.gr.ch/sites/dokumentation/offen.html">Statistik Passöffnungen</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.strassen.gr.ch/sites/dokumentation/frequenzen.html">Verkehrsfrequenzen</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+
+            </div>
+            <div class="col-xs-12 breadcrumb"></div>
+        </div>
+        <div class="row main-container">
+<div class="content-container col-xs-12 col-sm-8 col-md-9 col-lg-9">
+    <div class="container-inner col-xs-12">
+        <div class="container-box">
+            <div class="row-fluid">
+                <div class="col-xs-12 content">
+                    <h1 class="col-xs-6">Liste Strassenzustand</h1>
+                    <div class="col-xs-6">
+                        <p class="text-right">
+                            <a href="http://www.strassen.gr.ch/sites/strassenzustand/pdf_list.html" target="_blank">
+                            <img class="icon" src="http://www.strassen.gr.ch/sites/images/pdf.gif" border="0" />Meldungen als PDF
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xs-12 content">
+                    <table class="generate-data generate-data-table">
+	<tbody class="status-item">
+			<!-- recordset : start -->
+
+			<!-- recordset header : start -->
+            <tr class="item-title">
+                <td class="region">
+                    						 A
+					                </td>
+                <td colspan="2" class="text">
+                	                    	Surselva und Seitent&auml;ler, inkl. A13 Maienfeld bis Reichenau
+                                    </td>
+            </tr>
+            <tr class="item-title-border">
+            	<td colspan="3" class="item-border">
+            		&nbsp;
+            	</td>
+            </tr>
+            <!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				
+<!-- street recordset item : start -->
+                <tr class="item-message">
+                    <td class="status">
+                    	                    		<img src="http://strassen.gr.ch/lib/phpThumb.php?src=data/media/symbole/201_allgemeines_fahrverbot.jpg&amp;w=20" style="width:20px;">
+                    	                    </td>
+                    <td class="message">
+                    	                            <strong>
+                                                                	H19 Oberalpstrasse,
+                                                                                                	Tschamut - Andermatt:
+                                                                                                	Wintersperre.
+                                                            </strong>
+                            <span class="duration">
+                                								                            </span>
+                            <span class="place">
+                                                            </span>
+                        						                    </td>
+                    <td class="published">
+                    	07.12.2018 13:41 1971ml
+                    </td>
+                </tr>
+                <!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    				<!-- recordset : start -->
+
+			<!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				
+<!-- street recordset item : start -->
+                <tr class="item-message">
+                    <td class="status">
+                    	                    		<img src="http://strassen.gr.ch/lib/phpThumb.php?src=data/media/symbole/schneebedeckt.jpg&amp;w=20" style="width:20px;">
+                    	                    </td>
+                    <td class="message">
+                    	                            <strong>
+                                                                	Lukmanierstrasse,
+                                                                                                	Fuorns - Campra:
+                                                                                                	schneebedeckt, aus Sicherheitsgruenden.
+                                                            </strong>
+                            <span class="duration">
+                                								                            </span>
+                            <span class="place">
+                                                            </span>
+                        						                    </td>
+                    <td class="published">
+                    	01.03.2019 09:16 1970ml
+                    </td>
+                </tr>
+                <!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    				<!-- recordset : start -->
+
+			<!-- recordset header : start -->
+            <tr class="item-title">
+                <td class="region">
+                    						 B
+					                </td>
+                <td colspan="2" class="text">
+                	                    	Nordb&uuml;nden, Lenzerheide, Domleschg/Heinzenberg, Rheinwald/Schams, Avers, Misox, Calancatal
+                                    </td>
+            </tr>
+            <tr class="item-title-border">
+            	<td colspan="3" class="item-border">
+            		&nbsp;
+            	</td>
+            </tr>
+            <!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				
+<!-- street recordset item : start -->
+                <tr class="item-message">
+                    <td class="status">
+                    	                    		<img src="http://strassen.gr.ch/lib/phpThumb.php?src=data/media/symbole/201_allgemeines_fahrverbot.jpg&amp;w=20" style="width:20px;">
+                    	                    </td>
+                    <td class="message">
+                    	                            <strong>
+                                                                	H13 Italienische Strasse,
+                                                                                                	Hinterrhein - San Bernardino:
+                                                                                                	Wintersperre.
+                                                            </strong>
+                            <span class="duration">
+                                								                            </span>
+                            <span class="place">
+                                                            </span>
+                        						                    </td>
+                    <td class="published">
+                    	05.11.2018 13:11 1972ml
+                    </td>
+                </tr>
+                <!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    				<!-- recordset : start -->
+
+			<!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				
+<!-- street recordset item : start -->
+                <tr class="item-message">
+                    <td class="status">
+                    	                    		<img src="http://strassen.gr.ch/lib/phpThumb.php?src=data/media/symbole/201_allgemeines_fahrverbot.jpg&amp;w=20" style="width:20px;">
+                    	                    </td>
+                    <td class="message">
+                    	                            <strong>
+                                                                	Spl&uuml;genstrasse,
+                                                                                                	Spluegen - Landesgrenze:
+                                                                                                	Wintersperre.
+                                                            </strong>
+                            <span class="duration">
+                                								                            </span>
+                            <span class="place">
+                                                            </span>
+                        						                    </td>
+                    <td class="published">
+                    	27.11.2018 16:56 1973ml
+                    </td>
+                </tr>
+                <!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    				<!-- recordset : start -->
+
+			<!-- recordset header : start -->
+            <tr class="item-title">
+                <td class="region">
+                    						 C
+					                </td>
+                <td colspan="2" class="text">
+                	                    	Pr&auml;ttigau und Davos, inklusive A13 Maienfeld bis Landquart,  Unterengadin mit M&uuml;nstertal und Samnaun, Bahnverlad Vereina
+                                    </td>
+            </tr>
+            <tr class="item-title-border">
+            	<td colspan="3" class="item-border">
+            		&nbsp;
+            	</td>
+            </tr>
+            <!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				
+<!-- street recordset item : start -->
+                <tr class="item-message">
+                    <td class="status">
+                    	                    		<img src="http://strassen.gr.ch/lib/phpThumb.php?src=data/media/symbole/bahn_2.jpg&amp;w=20" style="width:20px;">
+                    	                    </td>
+                    <td class="message">
+                    	                        	<p class="hint">
+                                <strong>
+									Autoverlad Vereina
+										, Strecke Vereinalinie:
+																														Selfranga keine Wartezeit
+																							, Sagliains keine Wartezeit
+																														                                </strong>
+                            </p>
+												                    </td>
+                    <td class="published">
+                    	18.01.2019 13:24 3600lo
+                    </td>
+                </tr>
+                <!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    				<!-- recordset : start -->
+
+			<!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				
+<!-- street recordset item : start -->
+                <tr class="item-message">
+                    <td class="status">
+                    	                    		<img src="http://strassen.gr.ch/lib/phpThumb.php?src=data/media/symbole/201_allgemeines_fahrverbot.jpg&amp;w=20" style="width:20px;">
+                    	                    </td>
+                    <td class="message">
+                    	                            <strong>
+                                                                	H28 Fl�elastrasse,
+                                                                                                	Tschuggen - Susch:
+                                                                                                	Wintersperre.
+                                                            </strong>
+                            <span class="duration">
+                                								                            </span>
+                            <span class="place">
+                                                            </span>
+                        													<span class="place">
+																	Davos - Tschuggen: schneebedeckt.
+																							</span>
+						                    </td>
+                    <td class="published">
+                    	16.01.2019 18:44 1968ml
+                    </td>
+                </tr>
+                <!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    				<!-- recordset : start -->
+
+			<!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				
+<!-- street recordset item : start -->
+                <tr class="item-message">
+                    <td class="status">
+                    	                    		<img src="http://strassen.gr.ch/lib/phpThumb.php?src=data/media/symbole/201_allgemeines_fahrverbot.jpg&amp;w=20" style="width:20px;">
+                    	                    </td>
+                    <td class="message">
+                    	                            <strong>
+                                                                	Umbrailstrasse,
+                                                                                                	Sta. Maria i. M. - Landesgrenze:
+                                                                                                	geschlossen.
+                                                            </strong>
+                            <span class="duration">
+                                								                            </span>
+                            <span class="place">
+                                                            </span>
+                        													<span class="place">
+																	&nbsp;Wintersperre.
+																							</span>
+						                    </td>
+                    <td class="published">
+                    	09.11.2018 07:59 1974ml
+                    </td>
+                </tr>
+                <!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    				<!-- recordset : start -->
+
+			<!-- recordset header : start -->
+            <tr class="item-title">
+                <td class="region">
+                    						 D
+					                </td>
+                <td colspan="2" class="text">
+                	                    	Schin, Oberhalbstein, Albulatal, Oberengadin, Bergell, Puschlav
+                                    </td>
+            </tr>
+            <tr class="item-title-border">
+            	<td colspan="3" class="item-border">
+            		&nbsp;
+            	</td>
+            </tr>
+            <!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				
+<!-- street recordset item : start -->
+                <tr class="item-message">
+                    <td class="status">
+                    	                    		<img src="http://strassen.gr.ch/lib/phpThumb.php?src=data/media/symbole/201_allgemeines_fahrverbot.jpg&amp;w=20" style="width:20px;">
+                    	                    </td>
+                    <td class="message">
+                    	                            <strong>
+                                                                	Albulastrasse,
+                                                                                                	Berguen - Preda:
+                                                                                                	gesperrt, Wintersperre.
+                                                            </strong>
+                            <span class="duration">
+                                								                            </span>
+                            <span class="place">
+                                                            </span>
+                        						                    </td>
+                    <td class="published">
+                    	11.02.2019 15:30 1975ml
+                    </td>
+                </tr>
+                <!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    				<!-- recordset : start -->
+
+			<!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				
+<!-- street recordset item : start -->
+                <tr class="item-message">
+                    <td class="status">
+                    	                    		<img src="http://strassen.gr.ch/lib/phpThumb.php?src=data/media/symbole/201_allgemeines_fahrverbot.jpg&amp;w=20" style="width:20px;">
+                    	                    </td>
+                    <td class="message">
+                    	                            <strong>
+                                                                	Albulastrasse,
+                                                                                                	Preda - La Punt Chamues-ch:
+                                                                                                	Wintersperre.
+                                                            </strong>
+                            <span class="duration">
+                                								                            </span>
+                            <span class="place">
+                                                            </span>
+                        						                    </td>
+                    <td class="published">
+                    	12.02.2019 07:49 1967ml
+                    </td>
+                </tr>
+                <!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    				<!-- recordset : start -->
+
+			<!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				
+<!-- street recordset item : start -->
+                <tr class="item-message">
+                    <td class="status">
+                    	                    		<img src="http://strassen.gr.ch/lib/phpThumb.php?src=data/media/symbole/201_allgemeines_fahrverbot.jpg&amp;w=20" style="width:20px;">
+                    	                    </td>
+                    <td class="message">
+                    	                            <strong>
+                                                                	Forcola-di-Livigno-Strasse,
+                                                                                                	La Motta - Landesgrenze:
+                                                                                                	Wintersperre.
+                                                            </strong>
+                            <span class="duration">
+                                								                            </span>
+                            <span class="place">
+                                                            </span>
+                        						                    </td>
+                    <td class="published">
+                    	13.11.2018 19:46 1969ml
+                    </td>
+                </tr>
+                <!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    				<!-- recordset : start -->
+
+			<!-- recordset header : start -->
+            <tr class="item-title">
+                <td class="region">
+                    						 E
+					                </td>
+                <td colspan="2" class="text">
+                	                    	Geschlossene P&auml;sse
+                                    </td>
+            </tr>
+            <tr class="item-title-border">
+            	<td colspan="3" class="item-border">
+            		&nbsp;
+            	</td>
+            </tr>
+            <!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				
+<!-- street recordset item : start -->
+                <tr class="item-message">
+                    <td class="status">
+                    	                    		<img src="http://strassen.gr.ch/lib/phpThumb.php?src=data/media/symbole/201_allgemeines_fahrverbot.jpg&amp;w=20" style="width:20px;">
+                    	                    </td>
+                    <td class="message">
+                    	                            <strong>
+                                                                	H13 Italienische Strasse,
+                                                                                                	Hinterrhein - San Bernardino:
+                                                                                                	Wintersperre.
+                                                            </strong>
+                            <span class="duration">
+                                								                            </span>
+                            <span class="place">
+                                                            </span>
+                        						                    </td>
+                    <td class="published">
+                    	05.11.2018 13:11 1972ml
+                    </td>
+                </tr>
+                <!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    				<!-- recordset : start -->
+
+			<!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				
+<!-- street recordset item : start -->
+                <tr class="item-message">
+                    <td class="status">
+                    	                    		<img src="http://strassen.gr.ch/lib/phpThumb.php?src=data/media/symbole/201_allgemeines_fahrverbot.jpg&amp;w=20" style="width:20px;">
+                    	                    </td>
+                    <td class="message">
+                    	                            <strong>
+                                                                	H19 Oberalpstrasse,
+                                                                                                	Tschamut - Andermatt:
+                                                                                                	Wintersperre.
+                                                            </strong>
+                            <span class="duration">
+                                								                            </span>
+                            <span class="place">
+                                                            </span>
+                        						                    </td>
+                    <td class="published">
+                    	07.12.2018 13:41 1971ml
+                    </td>
+                </tr>
+                <!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    				<!-- recordset : start -->
+
+			<!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				
+<!-- street recordset item : start -->
+                <tr class="item-message">
+                    <td class="status">
+                    	                    		<img src="http://strassen.gr.ch/lib/phpThumb.php?src=data/media/symbole/201_allgemeines_fahrverbot.jpg&amp;w=20" style="width:20px;">
+                    	                    </td>
+                    <td class="message">
+                    	                            <strong>
+                                                                	H28 Fl�elastrasse,
+                                                                                                	Tschuggen - Susch:
+                                                                                                	Wintersperre.
+                                                            </strong>
+                            <span class="duration">
+                                								                            </span>
+                            <span class="place">
+                                                            </span>
+                        													<span class="place">
+																	Davos - Tschuggen: schneebedeckt.
+																							</span>
+						                    </td>
+                    <td class="published">
+                    	16.01.2019 18:44 1968ml
+                    </td>
+                </tr>
+                <!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    				<!-- recordset : start -->
+
+			<!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				<!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    				<!-- recordset : start -->
+
+			<!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				
+<!-- street recordset item : start -->
+                <tr class="item-message">
+                    <td class="status">
+                    	                    		<img src="http://strassen.gr.ch/lib/phpThumb.php?src=data/media/symbole/201_allgemeines_fahrverbot.jpg&amp;w=20" style="width:20px;">
+                    	                    </td>
+                    <td class="message">
+                    	                            <strong>
+                                                                	Albulastrasse,
+                                                                                                	Berguen - Preda:
+                                                                                                	gesperrt, Wintersperre.
+                                                            </strong>
+                            <span class="duration">
+                                								                            </span>
+                            <span class="place">
+                                                            </span>
+                        						                    </td>
+                    <td class="published">
+                    	11.02.2019 15:30 1975ml
+                    </td>
+                </tr>
+                <!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    				<!-- recordset : start -->
+
+			<!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				
+<!-- street recordset item : start -->
+                <tr class="item-message">
+                    <td class="status">
+                    	                    		<img src="http://strassen.gr.ch/lib/phpThumb.php?src=data/media/symbole/201_allgemeines_fahrverbot.jpg&amp;w=20" style="width:20px;">
+                    	                    </td>
+                    <td class="message">
+                    	                            <strong>
+                                                                	Albulastrasse,
+                                                                                                	Preda - La Punt Chamues-ch:
+                                                                                                	Wintersperre.
+                                                            </strong>
+                            <span class="duration">
+                                								                            </span>
+                            <span class="place">
+                                                            </span>
+                        						                    </td>
+                    <td class="published">
+                    	12.02.2019 07:49 1967ml
+                    </td>
+                </tr>
+                <!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    				<!-- recordset : start -->
+
+			<!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				
+<!-- street recordset item : start -->
+                <tr class="item-message">
+                    <td class="status">
+                    	                    		<img src="http://strassen.gr.ch/lib/phpThumb.php?src=data/media/symbole/201_allgemeines_fahrverbot.jpg&amp;w=20" style="width:20px;">
+                    	                    </td>
+                    <td class="message">
+                    	                            <strong>
+                                                                	Forcola-di-Livigno-Strasse,
+                                                                                                	La Motta - Landesgrenze:
+                                                                                                	Wintersperre.
+                                                            </strong>
+                            <span class="duration">
+                                								                            </span>
+                            <span class="place">
+                                                            </span>
+                        						                    </td>
+                    <td class="published">
+                    	13.11.2018 19:46 1969ml
+                    </td>
+                </tr>
+                <!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    				<!-- recordset : start -->
+
+			<!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				
+<!-- street recordset item : start -->
+                <tr class="item-message">
+                    <td class="status">
+                    	                    		<img src="http://strassen.gr.ch/lib/phpThumb.php?src=data/media/symbole/201_allgemeines_fahrverbot.jpg&amp;w=20" style="width:20px;">
+                    	                    </td>
+                    <td class="message">
+                    	                            <strong>
+                                                                	Spl&uuml;genstrasse,
+                                                                                                	Spluegen - Landesgrenze:
+                                                                                                	Wintersperre.
+                                                            </strong>
+                            <span class="duration">
+                                								                            </span>
+                            <span class="place">
+                                                            </span>
+                        						                    </td>
+                    <td class="published">
+                    	27.11.2018 16:56 1973ml
+                    </td>
+                </tr>
+                <!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    				<!-- recordset : start -->
+
+			<!-- recordset header : end -->
+<!-- recordset item : start -->
+			
+				
+<!-- street recordset item : start -->
+                <tr class="item-message">
+                    <td class="status">
+                    	                    		<img src="http://strassen.gr.ch/lib/phpThumb.php?src=data/media/symbole/201_allgemeines_fahrverbot.jpg&amp;w=20" style="width:20px;">
+                    	                    </td>
+                    <td class="message">
+                    	                            <strong>
+                                                                	Umbrailstrasse,
+                                                                                                	Sta. Maria i. M. - Landesgrenze:
+                                                                                                	geschlossen.
+                                                            </strong>
+                            <span class="duration">
+                                								                            </span>
+                            <span class="place">
+                                                            </span>
+                        													<span class="place">
+																	&nbsp;Wintersperre.
+																							</span>
+						                    </td>
+                    <td class="published">
+                    	09.11.2018 07:59 1974ml
+                    </td>
+                </tr>
+                <!-- street recordset item : end -->
+            <!-- recordset Item : end -->
+    			</tbody>
+</table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel-container col-xs-12 col-sm-4 col-md-3 col-lg-3">
+    <div class="container-inner col-xs-12">
+        <div class="container-box">
+    <h2>Karte Strassenzustand</h2>
+    <a href="karte.html">
+        <img src="http://www.strassen.gr.ch/sites/img/content/messages/karte.gif">
+    </a>
+</div>
+        <div class="container-box">
+    <h2>Meldungen abonnieren</h2>
+    <ul>
+        <li><a href="http://www.strassen.gr.ch/sites/strassenzustand/abonnieren.html">SMS-Service</a>
+        </li>
+        <li><a href="http://www.strassen.gr.ch/sites/strassenzustand/abonnieren.html">Mobiler Zugriff</a>
+        </li>
+        <li><a href="http://www.strassen.gr.ch/sites/strassenzustand/abonnieren.html">RSS-Feed</a>
+        </li>
+    </ul>
+</div>
+        <div class="container-box">
+    <h2>Wichtige Verkehrslinks</h2>
+    <ul>
+        <li>
+            <a href="http://www.truckinfo.ch/" target="_blank">Truckinfo ASTRA</a>
+        </li>
+        <li>
+            <a href="http://sbb-him.hafas.de/bin/help.exe/dn?tpl=showmap_external" target="_blank">Verkehrslage Bahnen</a>
+        </li>
+        <li>
+            <a href="http://www.rhb.ch/Vereina.63.0.html" target="_blank">Autoverlad Vereina</a>
+        </li>
+        <li>
+            <a href="http://www.matterhorngotthardbahn.ch/de/angebote/autoverlad/oberalp/Pages/default.aspx" target="_blank">Autoverlad Oberalp</a>
+        </li>
+        <li>
+            <a href="http://www.postauto.ch/pag-startseite/pag-kundenservice/pag-streckenunterbrueche.htm" target="_blank">Postauto</a>
+        </li>
+        <li>
+            <a href="http://www.swisswebcams.ch/" target="_blank">SwissWebCams</a>
+        </li>
+        <li>
+            <a href="http://www.kapo.gr.ch/" target="_blank">Kantonspolizei Graub&uuml;nden</a>
+        </li>
+        <li>
+            <a href="http://www.tiefbauamt.gr.ch/" target="_blank">Tiefbauamt Graub&uuml;nden</a>
+        </li>
+        <li>
+            <a href="http://www.stva.gr.ch/" target="_blank">Strassenverkehrsamt Graub&uuml;nden</a>
+        </li>
+        <li>
+            <a href="http://www.ig-alpenpaesse.ch" target="_blank">Interessengemeinschaft Alpenpässe</a>
+        </li>
+    </ul>
+</div>
+        <div class="container-box">
+    <h2>Regionen</h2>
+    <a href="abonnieren.html">
+        <img src="http://www.strassen.gr.ch/lib/phpThumb.php?src=/sites/img/content/rss/sk_gr_regionenohne.jpg&amp;w=300">
+    </a>
+</div>
+        <div class="container-box">
+    <h2>Aktualit&auml;t Meldungen</h2>
+    <p>
+        Der Strassenzustand wird von unseren Mitarbeitenden vor Ort so aktuell wie m&ouml;glich an strassen.gr.ch gemeldet. Da sich in den Bergen die Wetterverh&auml;ltnisse und damit der Strassenzustand sehr schnell &auml;ndern k&ouml;nnen, ist die unmittelbare Darstellung des Strassenzustandes grunds&auml;tzlich nicht m&ouml;glich.
+    </p>
+    <p>
+        Jede Haftung irgendwelcher Art auf Grund der Meldungen wird abgelehnt. Es gilt die Signalisation vor Ort.
+    </p>
+    <div class="col-xs-12">
+        <hr>
+    </div>
+    <div class="row-fluid">
+        <div class="info-row">
+            <p class="info-col-left">Datenaktualisierung:
+                <span class="info-col-right">05.03.19 - 14:14</span>
+            </p>
+            <p class="info-col-left">Letzte Meldung:
+                <span class="info-col-right">01.03.19 - 09:16</span>
+            </p>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+        </div>
+        <div class="footer row">
+            <div class="col-xs-6 col-sm-8 col-md-9 col-lg-10">
+                <ul class="footer-nav">
+                    <li>© 2019 Kanton Graubünden</li>
+                    <li class="webmaster-link">
+                        <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#116;&#114;&#97;&#115;&#115;&#101;&#110;&#64;&#116;&#98;&#97;&#46;&#103;&#114;&#46;&#99;&#104;">Webmaster</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 logos">
+                <a href="http://www.graubuenden.ch/marke" target="_blank">
+                    <img src="http://www.strassen.gr.ch/sites/img/redesign/icon_graubuenden_tourismus_weiss_bg_20_80px.gif" alt="Kanton Graub&uuml;nden" title="Kanton Graub&uuml;nden">
+                </a>
+                <a href="http://www.strassen.gr.ch/sites/img/redesign/icon_ch_ch_20_20px.gif" target="_blank">
+                    <img src="http://www.strassen.gr.ch/sites/img/redesign/icon_ch_ch_20_20px.gif" alt="Kanton Graub&uuml;nden" title="Kanton Graub&uuml;nden">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--[if lte IE 9]>
+        <script src="http://www.strassen.gr.ch/sites/new/js/ie-badness.js"></script>
+    <![endif]-->
+
+</body>
+</html>

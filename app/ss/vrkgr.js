@@ -5,6 +5,6 @@ page.viewportSize = { width: 1024, height: 768 };
 page.clipRect = { top: 280, left: 30, width: 980, height: 740 };
 //the rest of the code is the same as the previous example
 page.open('http://www.strassen.gr.ch/sites/strassenzustand/karte.html', function() {
-    page.render('/var/www/html/ae/ss/vrkgr.png');
+    page.render('/usr/share/nginx/html/ss/vrkgr.png');
     phantom.exit();
 });

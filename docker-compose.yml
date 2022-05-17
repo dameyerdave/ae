@@ -1,0 +1,9 @@
+version: "3"
+services:
+  ae:
+    build: .
+    ports: 
+      - '8443:80'
+    restart: unless-stopped
+    volumes: 
+      - ./app:/usr/share/nginx/html:z

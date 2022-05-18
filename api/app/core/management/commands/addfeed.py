@@ -15,4 +15,4 @@ class Command(BaseCommand):
 
 
     def handle(self, *args, **options):
-        Source.objects.create(name=options['name'], feed_url=options['url'], interval=0)
+        Source.objects.create(name=options['name'], feed_url=options['url'], interval=1)

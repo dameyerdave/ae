@@ -1,9 +1,38 @@
 version: "3"
 services:
-  ae:
-    build: .
-    ports: 
-      - '8443:80'
+  ui:
+    build: 
+      context: ui
     restart: unless-stopped
     volumes: 
-      - ./app:/usr/share/nginx/html:z
+      - ./ui/app:/usr/share/nginx/html:z
+      - ./ui/nginx.conf:/etc/nginx/templates/default.conf.template
+  api:
+    build:
+      context: api
+    hostname: api
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./api/app:/app
+      - ./api/config:/config
+      - ./api/plugins:/plugins
+      - ./.git:/.git
+      - ./data:/data
+    environment:
+      - POSTGRES_HOST=db
+    env_file: .env
+    depends_on:
+      - db
+    command: >
+      sh -c "python manage.py collectstatic --noinput &&
+             python manage.py wait_for_db &&
+             python manage.py makemigrations core &&
+             python manage.py migrate &&
+             python manage.py initadmin &&
+             python manage.py runserver 0.0.0.0:5000"
+  db:
+    image: postgres:13.4-alpine
+    hostname: db
+    restart: unless-stopped
+    env_file: .env

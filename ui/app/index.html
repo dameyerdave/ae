@@ -46,6 +46,12 @@ td {
 #wefnews td:nth-child(3) {
 	font-weight: bold;
 }
+#wefnews li {
+	margin-bottom: 10px;
+}
+#wefnews li img {
+	width: 15px;
+}
 #wefpics img {
 	width: 280px;
 }
@@ -333,30 +339,35 @@ $.get(
 $.get(
    'ss/hugge.html',
    function(data){
-	var $xml = $(data);
-	$xml.find("address > img").each(function() {
-		$("#hugge").attr("src", $(this).attr("src"));
-	});
+			var $xml = $(data);
+			$xml.find("address > img").each(function() {
+				$("#hugge").attr("src", $(this).attr("src"));
+			});
    }).promise().done(function() {
-	var md5 = CryptoJS.MD5($('#hugge').attr("src"));
-        if (localStorage.getItem("hugge") != md5) {
-                $('a[href="#grippe"]').prepend('<img src="pics/warn.png"/>&nbsp;');
-                localStorage.setItem("hugge", md5);
-        }	   
+			var md5 = CryptoJS.MD5($('#hugge').attr("src"));
+			if (localStorage.getItem("hugge") != md5) {
+							$('a[href="#grippe"]').prepend('<img src="pics/warn.png"/>&nbsp;');
+							localStorage.setItem("hugge", md5);
+			}	   
    });
 
-$.ajax({
-	url : "ss/news.txt",
-	dataType: "text",
-	success : function (data) {
-		$("#wefnews").html(data);
-		var md5 = CryptoJS.MD5($('#wefnews').html());
-		if (localStorage.getItem("wefnews") != md5) {
-			$('a[href="#news"]').prepend('<img src="pics/warn.png"/>&nbsp;');
-			localStorage.setItem("wefnews", md5);
-		}
-	}
-});
+$.get(
+	"/api/feeds/posts/?search=WEF,World Economic Forum,Ukraine,Russland,Davos&ordering=-created",
+	function (data) {
+		console.log('data', data)
+		ul = $('<ul></ul>')
+		data.results.forEach(function(post) {
+			ul.append('<li><a href="' + post.link + '"><b>' + post.title + '</b></a>' + '</br><i>' + post.created+ '</i> | <i>' + post.source + '</i><br/><i>'+ post.body +'</i></li>')
+		})
+		$("#wefnews").append(ul);
+		
+	}).promise().done(function() {
+			var md5 = CryptoJS.MD5($('#wefnews').attr("src"));
+			if (localStorage.getItem("wefnews") != md5) {
+							$('a[href="#news"]').prepend('<img src="pics/warn.png"/>&nbsp;');
+							localStorage.setItem("wefnews", md5);
+			}	 
+	});
 
 $.ajax({
 	url : "ss/pics.txt",

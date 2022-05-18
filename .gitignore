@@ -1,0 +1,6 @@
+.env*
+!.env.TEMPLATE
+
+__init__.py
+__pycache__
+*.pyc

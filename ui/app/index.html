@@ -238,7 +238,7 @@ Meteo
 <div id="gegenveranstaltungen" class="tab-pane fade">
 <h3>Gegenveranstaltungen</h3>
 <p>
-<img width="900" src="pics/veranstaltungen.png" />
+<img width="900" src="mdav/pics/veranstaltungen.png" />
 </p>
 </div> <!--END Gegenveranstaltungen-->
 
@@ -306,7 +306,7 @@ $.get(
 	}).promise().done(function() {
 		var md5 = CryptoJS.MD5($('#feed ul li').text());
                 if (localStorage.getItem("feed") != md5) {
-                        $('a[href="#strassenverkehr"]').prepend('<img src="pics/warn.png"/>&nbsp;');
+                        $('a[href="#strassenverkehr"]').prepend('<img src="mdav/pics/warn.png"/>&nbsp;');
                         localStorage.setItem("feed", md5);
                 }	
 	});
@@ -330,7 +330,7 @@ $.get(
 	}).promise().done(function() {
 		var md5 = CryptoJS.MD5($('#rhb').html());
 		if (localStorage.getItem("rhb") != md5) {
-			$('a[href="#schienenverkehr"]').prepend('<img src="pics/warn.png"/>&nbsp;');
+			$('a[href="#schienenverkehr"]').prepend('<img src="mdav/pics/warn.png"/>&nbsp;');
 			localStorage.setItem("rhb", md5);
 		}
 	});
@@ -346,7 +346,7 @@ $.get(
    }).promise().done(function() {
 			var md5 = CryptoJS.MD5($('#hugge').attr("src"));
 			if (localStorage.getItem("hugge") != md5) {
-							$('a[href="#grippe"]').prepend('<img src="pics/warn.png"/>&nbsp;');
+							$('a[href="#grippe"]').prepend('<img src="mdav/pics/warn.png"/>&nbsp;');
 							localStorage.setItem("hugge", md5);
 			}	   
    });
@@ -364,7 +364,7 @@ $.get(
 	}).promise().done(function() {
 			var md5 = CryptoJS.MD5($('#wefnews').attr("src"));
 			if (localStorage.getItem("wefnews") != md5) {
-							$('a[href="#news"]').prepend('<img src="pics/warn.png"/>&nbsp;');
+							$('a[href="#news"]').prepend('<img src="mdav/pics/warn.png"/>&nbsp;');
 							localStorage.setItem("wefnews", md5);
 			}	 
 	});
@@ -376,7 +376,7 @@ $.ajax({
 		$("#wefpics").html(data);
 		var md5 = CryptoJS.MD5($('#wefpics').html());
 		if (localStorage.getItem("wefpics") != md5) {
-			$('a[href="#pics"]').prepend('<img src="pics/warn.png"/>&nbsp;');
+			$('a[href="#pics"]').prepend('<img src="mdav/pics/warn.png"/>&nbsp;');
 			localStorage.setItem("wefpics", md5);
 		}
 	}
